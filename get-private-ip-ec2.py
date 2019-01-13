@@ -1,7 +1,7 @@
 def get_addr(stack_name):
     autoscaling_group_id = cloudformation_client.describe_stack_resource(
         StackName=args.stack,
-        LogicalResourceId="SolrAutoScalingGroup"
+        LogicalResourceId="AutoScalingGroup"
     )['StackResourceDetail']['PhysicalResourceId']
 
     # Find ids of instances in autoscaling groups
